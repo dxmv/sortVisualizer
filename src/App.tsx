@@ -9,7 +9,7 @@ import { generateNewArray } from "./redux/array";
 function App() {
 	const dispatch = useAppDispatch();
 	useEffect(() => {
-		dispatch(generateNewArray(20));
+		dispatch(generateNewArray(10));
 	}, []);
 	return (
 		<>

@@ -1,8 +1,13 @@
 const generateRandomArray = (num: number): Array<number> => {
 	const arr: Array<number> = [];
-	const MAX = 40;
+	const map: Map<number, boolean> = new Map<number, boolean>();
 	for (let i = 0; i < num; i++) {
-		arr.push(Math.floor(Math.random() * MAX));
+		let newNum = Math.floor(Math.random() * num);
+		while (map.get(newNum)) {
+			newNum = Math.floor(Math.random() * num);
+		}
+		arr.push(newNum);
+		map.set(newNum, true);
 	}
 	return arr;
 };
