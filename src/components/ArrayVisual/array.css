@@ -1,0 +1,23 @@
+main {
+	width: 100%;
+	justify-self: center;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	height: 92vh;
+}
+
+#list {
+	display: flex;
+	width: 60%;
+	transform: rotate(180deg);
+}
+
+.array-element {
+	background-color: aqua;
+	text-align: center;
+	transform: rotate(180deg);
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}

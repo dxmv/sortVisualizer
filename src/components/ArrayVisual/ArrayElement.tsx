@@ -1,5 +1,20 @@
 import React from "react";
 
-export default function ArrayElement({ value }: { value: number }) {
-	return <div>{value}</div>;
+const REGULAR_HEIGHT = 20;
+
+export default function ArrayElement({
+	value,
+	width,
+}: {
+	value: number;
+	width: number;
+}) {
+	return (
+		<div
+			className="array-element"
+			style={{ width, height: `${REGULAR_HEIGHT * value}px` }}
+		>
+			{value}
+		</div>
+	);
 }
