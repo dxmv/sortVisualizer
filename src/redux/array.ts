@@ -20,10 +20,13 @@ export const arraySlice = createSlice({
 		generateNewArray: (state, action: PayloadAction<number>) => {
 			state.array = generateRandomArray(action.payload);
 		},
+		setArray: (state, action: PayloadAction<Array<number>>) => {
+			state.array = action.payload;
+		},
 	},
 });
 
-export const { generateNewArray } = arraySlice.actions;
+export const { generateNewArray, setArray } = arraySlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
 export const selectArray = (state: RootState) => state.array;

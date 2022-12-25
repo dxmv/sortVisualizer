@@ -9,7 +9,11 @@ export default function ArrayVisual() {
 		<main>
 			<div id="list">
 				{array.map(v => (
-					<ArrayElement value={v} width={window.innerWidth / array.length} />
+					<ArrayElement
+						key={v}
+						value={v}
+						width={window.innerWidth / array.length}
+					/>
 				))}
 			</div>
 		</main>

@@ -12,6 +12,7 @@ export default function ArrayElement({
 	return (
 		<div
 			className="array-element"
+			id={`element-${value}`}
 			style={{ width, height: `${REGULAR_HEIGHT * value}px` }}
 		>
 			{value}
